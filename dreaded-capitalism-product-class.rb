@@ -10,14 +10,23 @@ class Product
 		@tax_rate = tax_rate 
 
 	end 
-	
+
+	def name #name reader
+		return @name
+	end 
+
 	def calculator 
 		price = @base_price
 		tax_amount = @tax_rate * @base_price
 		total = price + tax_amount
 		return total
-
 	end
+
+	def before_tax_calculator 
+		price = @base_price
+		total = price 
+		return total
+	end 
 
 end 
 
