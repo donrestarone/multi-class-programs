@@ -10,6 +10,7 @@ class Product
 		@tax_rate = tax_rate 
 
 	end 
+	
 	def calculator 
 		price = @base_price
 		tax_amount = @tax_rate * @base_price
@@ -31,4 +32,5 @@ product2 = Product.new("product2", 500, 0.15)
 puts product1.inspect
 puts product2.inspect
 
+#calculate out the door price for any given variable-product
 puts product1.calculator.inspect
